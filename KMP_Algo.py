@@ -1,6 +1,7 @@
 """
 Knuth–Morris–Pratt algorithm
-looks for instances of a "pattern" inpPattern inside a main "text string" inpText, based on the observation that when a mismatch occurs, the word itself has enough information to indicate where the next match could begin, avoiding the need to re-examine previously matched letters.  
+looks for instances of a "pattern" inpPattern inside a main "text string" inpText, based on the observation that when a mismatch occurs, 
+the word itself has enough information to indicate where the next match could begin, avoiding the need to re-examine previously matched letters.  
 The total Time Complexity is reduced to O(length of string(n)+length of pattern(n)) compared to normal approach with runtime O(n*n).
 """
 
