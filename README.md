@@ -46,3 +46,5 @@ The whole code is written in Python using Jupyter Notebook. Simple run command c
 
 ## Results
 Output Screenshots after Code Run:
+<pre>    <img src="Fig2.png" width="600" height="400">     </pre>
+<pre>    <img src="Fig3.jpeg" width="600" height="400">     </pre>
