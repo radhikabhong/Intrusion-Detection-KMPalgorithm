@@ -43,6 +43,6 @@ The whole code is written in Python using Jupyter Notebook. Simple run command c
 ## Results
 Output Screenshots after Code Run:
 In the Figure 1 the pattern is detected and hence index position for same is shown.
-<pre>    <img src="Out1.PNG" width="600" height="400">     </pre>
+<pre>    <img src="Out1.PNG" width="500" height="400">     </pre>
 In Figure 2 the pattern is not found in input string hence the pattern is None.
-<pre>    <img src="Out2.PNG" width="600" height="400">     </pre>
+<pre>    <img src="Out2.PNG" width="500" height="400">     </pre>
