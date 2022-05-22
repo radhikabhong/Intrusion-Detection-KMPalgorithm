@@ -20,17 +20,25 @@ log data packages according to the mode set in advance and call concrete process
 Steps in the KMP Algorithm KMP - Matcher (S,p)
 Step.1	n ← length [S]
 Step.2	m ← length [p]
-Step.3	Π← Compute-Prefix-Function (p) Step.4	q ← 0 //number of characters matched Step.5	for i← 1 to n // scan S from left to right Step.6	do while q > 0 and p[q+1] ! = S[i]
-Step.7	do q ←Π[q] // next character does not match Step.8	if p [q+1] = S[i]
-Step.9	then q← q+1 //next character matches Step.10		if q = m	// is all of p matched
-Step.11	Then print “Pattern occurs with shift” i - m Step.12		q ←Π [q] //look for the next match
+Step.3	Π← Compute-Prefix-Function (p)
+Step.4	q ← 0 //number of characters matched
+Step.5	for i← 1 to n // scan S from left to right
+Step.6	do while q > 0 and p[q+1] ! = S[i]
+Step.7	do q ←Π[q] // next character does not match
+Step.8	if p [q+1] = S[i]
+Step.9	then q← q+1 //next character matches
+Step.10		if q = m	// is all of p matched
+Step.11	Then print “Pattern occurs with shift” i - m
+Step.12		q ←Π [q] //look for the next match
 
 Pseudo-code computation of prefix function Π is given by:
 
-Step.1	m ← length [p]	// ‘p’ pattern to be matched Step.2	Π [1] ← 0
+Step.1	m ← length [p]	// ‘p’ pattern to be matched
+Step.2	Π [1] ← 0
 Step.3	k ← 0
 Step.4	for q ← 2 to m
-Step.5	do while k > 0 and p [k+1]! = p [q] Step.6	do k ←Π [k]
+Step.5	do while k > 0 and p [k+1]! = p [q]
+Step.6	do k ←Π [k]
 Step.7	If p [k+1] = p [q]
 Step.8	then k ← k+1
 Step.9	Π [k] ← k
