@@ -4,13 +4,7 @@
 Intrusion detection technology can assist the system in dealing with network attacks by enhancing the system manager's security management capabilities and enhancing the integrity of the information security foundation structure. An intrusion detection system (IDS) is a device (or program) that monitors network and/or system activities for malicious activity or policy breaches and reports back to a Management Station. Pattern matching algorithm is the main algorithm of intrusion detection systems based on feature matching, as well as a widely used algorithm in modern intrusion detection equipment. While glancing through the algorithms in CLRS, I came across Knuth–Morris–Pratt algorithm and found it to be quite intriguing and came with the project idea that proposes the KMP pattern matching algorithm-based implementation of a design intrusion detection system.
 
 ## What is the problem ?
-The overall flow of the process goes as follows:
-* First select the sample patch image that will be  randomly positioned in final large dimension image. 
-* For overlapped images we need to implement the graphcut algorithm on the overlapped pixels for smoothening the edges of the patch.
-* We represent this overlapped region in the form of graph and run edmonds karp minimum cut algorithm over it to ensure these smooth edges and this minimum cut is treated as the boundary for the inclusion of pixels from the overlapped images.
-* This process is repeated until we reach the maximum dimensions of the output image.
-* The boundary for the inclusion of pixels from the overlapped images is set by this minimum cut.
-* We repeat this process until the final image's dimensions are maxed out.
+Don Knuth, Jim Morris, and Vaughan Pratt first proposed this approach in 1977. It's similar to the Brute Force strategy in terms of scanning the text left to right, but we're now leveraging information from the previously compared characters to figure out how much the pattern can shift to the right. The goal is to avoid making comparisons with items from the text T that have already been compared to some pattern P elements. To accomplish this, KMP preprocesses the pattern to locate matches of the pattern's prefixes with the pattern itself.
 
 ## How is the problem solved ?
 A linear time technique is used for string matching in pattern matching. An intrusion detection system employs current intrusion detection equipment based on feature matching. For pattern matching, the KMP pattern matching algorithm is utilized. The symbol for pattern encapsulating the knowledge and how the pattern matches contrary to shifts of itself is employed by the prefix function in this algorithm. The information from pattern 'p' is used to avoid unnecessary pattern shifts. With string 'S', pattern 'p', and prefix as inputs, the KMP matcher finds the next 'p' occurrence in 'S' and provides the number of shifts of 'p' after which the occurrence is to be located. In the pattern matching process, a pattern algorithm is used to match letters in a string pattern from low to high levels of appearance likelihood. The feature matches keyword contents with data package payloads and calls the plug-in, which employs an efficient pattern matching algorithm to match the data packet payloads and discover the probable intrusion. Finally, the plug-in contains output processing based on detection findings, which logs data packages in the mode chosen in advance and calls the concrete processing function for an alert signal.
@@ -46,5 +40,7 @@ The whole code is written in Python using Jupyter Notebook. Simple run command c
 
 ## Results
 Output Screenshots after Code Run:
+In the Figure 1 the pattern is detected and hence index position for same is shown.
 <pre>    <img src="Out1.PNG" width="600" height="400">     </pre>
+In Figure 2 the pattern is not found in input string hence the pattern is None.
 <pre>    <img src="Out2.PNG" width="600" height="400">     </pre>
